@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ВТБ</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    .progress-bar {
+      width: 25%;
+      height: 20px;
+      background-color: #f3f3f3;
+      position: relative;
+      text-align: center;
+    }
+
+    .progress-bar-inner {
+      height: 100%;
+      width: 0;
+      background-color: #f70404;
+      position: absolute;
+    }
+  </style>
+  <body>
+    <p>Блок4</p>
+    <div>СайдБар Меню</div>
+    <button>назад</button>
+    <button>Редактировать</button>
+    <button>Отмена</button>
+    <div>
+      <h1>Сборка ПК</h1>
+      <p>Прогресс цели</p>
+      <div class="progress-bar">
+        <div class="progress-bar-inner">25%</div>
+      </div>
+      <div>
+        <p>Сумма, которую хотите накопить:</p>
+      </div>
+      <div><p>Приорите цели:</p></div>
+      <div><p>Приорите цели по времени:</p></div>
+      <div><p>Дата начала накопления:</p></div>
+      <div><p>Дата окончания накопления:</p></div>
+      <div></div>
+      <div>
+        <label for="formAge" class="form__label"
+          >Сумма которую хотите внести сейчас:</label
+        >
+        <br />
+        <input
+          type="number"
+          id="Age"
+          name="formAge"
+          placeholder=""
+          min="100"
+          required
+        />
+        <br />
+        <button>Пополнить</button>
+      </div>
+    </div>
+    <div><img src="images/block4_img.png" /></div>
+    <script src="index.js"></script>
+    <script>
+      const progressBar = document.querySelector(".progress-bar-inner");
+
+      function updateProgressBar(value) {
+        progressBar.style.width = value + "%";
+      }
+
+      updateProgressBar(25);
+    </script>
+  </body>
+</html>
