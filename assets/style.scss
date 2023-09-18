@@ -1,9 +1,10 @@
 //Основные цвета
-$color_blue: DeepSkyBlue;
-$color_blue_dark: DarkBlue;
+$color_blue: #009FDF;
+$color_blue_dark: #0A2973;
 $color_black: black;
 $color_White: white;
 $color_grey: LightGray;
+$color_red: red;
 
 
 //Шрифты
@@ -13,4 +14,80 @@ $font-family: 'Inter', sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+// Стили для страницы входа
+
+%input {
+    max-width: 60rem;
+    min-height: 5rem;
+    font-family: $font-family;
+    border-radius: 10px;
+}
+
+.form {
+    margin: 0 auto;
+    max-width: 30rem;
+    min-height: 40rem;
+    margin-top: 12rem;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 30% 20% 45%;
+    //border: 1px solid red;
+
+    &__image {
+        display: flex;
+        align-self: center;
+        margin-left: 6rem;
+        // border: 1px solid red;
+    }
+
+    &__text {
+        color: $color_black;
+        font-family: $font-family;
+        font-size: 2rem;
+        font-weight: 900;
+        //border: 1px solid red;
+        text-shadow: 2px 4px 3px rgba(63, 48, 48, 0.3);
+        padding-top: 1.8rem;
+
+    }
+
+    &__entrance {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        //border: 1px solid rgb(0, 255, 42);
+        gap: 0.6rem;
+    }
+
+    &__entrance_input {
+        @extend%input;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    &__entrance_submit {
+        @extend%input;
+        font-size: 2rem;
+        color: $color_White;
+        background-color: $color_blue;
+        border: none;
+        box-shadow: 2px 5px 3px rgba(63, 48, 48, 0.3);
+    }
+
+    &__entrance_error {
+        color: $color_red;
+        font-family: $font-family;
+        font-size: 1.5rem;
+    }
+}
+
+input:hover,
+input:focus {
+    border: 2px solid $color_blue_dark;
+    outline: $color_blue_dark;
+}
+
+.form__entrance_submit:hover {
+    background-color: $color_blue_dark;
 }
