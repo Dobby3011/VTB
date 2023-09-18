@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <main class="main-home">
+      <div class="container-home">
+        <sidebar class="sidebar"> </sidebar>
+        <section class="greeting">
+          <div class="greeting__container">
+            <h1 class="greeting__hello">Привет</h1>
+            <h1 class="greeting__name"></h1>
+          </div>
+          <object
+            data="./images/greeting-image.svg"
+            type="image/svg+xml"
+            class="greeting__image"
+          ></object>
+        </section>
+        <section class="goals">
+          <h1>Важные цели</h1>
+          <!-- Тут прописаны стили, но я думаю, goals__item нужно будет создавать и этот HTML вставлять в innerHTML, когда мы будем добавлять цель
+            <div class="goals__item">
+            <h4 class="goals__name"></h4>
+            <p class="goals__progress">Прогресс цели</p>
+            <div id="progress" class="goals__progressBar">
+              <div id="progressContent" class="goals__progressBar_content">
+                <span class="goals__progressBar_text"></span>
+              </div>
+            </div>
+            <div class="goals__bottom">
+              <div class="goals__money-left">
+                <span class="goals__left">Осталось собрать:</span>
+                <span class="goals__amount"></span>
+              </div>
+              <button class="goals__btn" type="button">&gt;</button>
+            </div>
+          </div> -->
+        </section>
+        <section class="money-total">
+          <h3 class="money-total__heading">Всего средств</h3>
+          <span class="money-total__amount"></span>
+        </section>
+        <section class="goals-total">
+          <h3 class="goals-total__heading">Всего целей</h3>
+          <span class="goals-total__amount"></span>
+        </section>
+      </div>
+    </main>
+    <script src="./js/home.js"></script>
+  </body>
+</html>
