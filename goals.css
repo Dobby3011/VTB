@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2? Family= Inter+Tight:wght@500 & display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 16px;
+}
+
+/*цвет шрифта лейблов и кнопок "сохранить" и "отмена"*/
+label, 
+#saveButton,
+#cancelButton{
+  color: rgba(0, 159, 223, 1);
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0em;
+  }
+
+/*цвет шрифта плейсходеров*/
+#goalInput,
+#sumInput,
+#prioritySelect,
+#deadlineSelect,
+#startDateInput,
+#endDateInput,
+#depositInput{
+  color: rgba(41, 41, 41, 1);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+/*шрифт и стиль кнопки Назад*/
+#back {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: rgba(41, 41, 41, 1);
+  }
+
+/*шрифт и стиль кнопки Пополнить*/
+#topUpButton{
+font-size: 24px;
+font-weight: 500;
+line-height: 29px;
+letter-spacing: 0em;
+text-align: center;
+color: rgba(255, 255, 255, 1);
+background-color: rgba(10, 41, 115, 1);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  max-width: 120rem;
+  height: 67.5rem;
+  margin: auto;
+  gap: 1rem;
+}
+.nav {
+  width: 7.5rem;
+  height: 63.75rem;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.goals_container {
+  display: flex;
+  width: 111.25rem;
+  height: 67.5rem;
+  padding-left: 1.25rem;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.back {
+  display: flex;
+  width: 60rem;
+  height: 10rem;
+  margin-top: 1.5rem;
+}
+
+.goals_content {
+  display: flex;
+  flex-direction: column;
+  width: 60rem;
+  height: 63.75rem;
+  background-color: rgba(237, 237, 237, 1);
+}
+.forms {
+  display: flex;
+}
+
+#back{
+  width: 6.5rem;
+  height: 3rem;
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+
+#saveButton,
+#cancelButton {
+  width: 16.8rem;
+  height: 2rem;
+  padding: 2rem 4rem 2rem 4rem;
+  border-radius: 0.6rem;
+  background-color: rgba(255, 255, 255, 1);
+  border: 2px solid rgba(0, 159, 223, 1);
+}
+
+#cancelButton{
+    margin-left: 1rem;;
+}
+#goalForm {
+  width: 29.3rem;
+  height: 39.2rem;
+  margin-left: 8rem;
+  gap: 1.25rem;
+}
+
+#addForm {
+  display: flex;
+  width: 18rem;
+  height: 20rem;
+  margin-top: 1.4rem;
+  margin-left: 2rem;
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(237, 237, 237, 1);
+  }
+
+label {
+  width: 7.4rem;
+  height: 1.3rem;
+  margin-top: 1rem;
+  }
+
+#goalInput,
+#sumInput,
+#prioritySelect,
+#deadlineSelect,
+#startDateInput,
+#endDateInput,
+#depositInput {
+  width: 29.3rem;
+  height: 3.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  border-radius: 0.1rem;
+  gap: 1.5rem;
+  
+}
+#imageInput,
+#clickableImage {
+  width: 5.8rem;
+  height: 5.8rem;
+  margin: 6rem 6rem;
+  padding: 1rem;
+  border-radius: 3.1rem;
+  border: 1px solid rgba(237, 237, 237, 1);
+}
+
+#topUpButton{
+width: 29.3rem;
+height: 4.8rem;
+margin-left: 8rem;
+margin-top: 5rem;
+padding: 2.75rem 4.5rem;
+border-radius: 0.6rem;
+gap: 0.6rem;
+}
+
+#goals_img {
+  display: flex;
+  width: 46.25rem;
+  height: 63.75rem;
+  margin-top: 1.8rem;
+  background: rgba(255, 255, 255, 1);
+}
+
+#img5 {
+  width: 43rem;
+  height: 43rem;
+  margin-top: 12.25rem;
+  margin-left: 65rem;
+}
