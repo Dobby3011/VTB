@@ -3,3 +3,235 @@
   margin: 0;
   padding: 0;
 }/*# sourceMappingURL=style.css.map */
+
+.settings_wrapper {
+  background-color: #EBEBEB;
+  width: 1920px;
+  height: 1080px;
+  padding: 0px, 0px, 0px, 20px;
+  display:flex;
+}
+
+aside {
+  background-color: #FFF;
+  width: 120px;
+  height: 1020px;
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+.settings_main {
+  display: grid;
+  background-color: #FFF;
+  width: 1729px;
+  height: 1020px;
+  margin-top: 30px;
+  margin-left: 25px;
+  margin-right: 25px;
+  border-radius: 10px;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr 1fr 3fr;
+}
+
+.target_settings {
+  color: #0A2973;
+  font-family: 'Inter';
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 53px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 50px;
+  margin-left: 80px;
+  grid-area: 1/1/2/2;
+}
+
+.save {
+  width: Fixed (470px);
+  height: Fixed (77px);
+  margin-top: 38px;
+  margin-right: 80px;
+  padding: 44px, 73px, 44px, 73px;
+  border-radius: 10px;
+  gap: 10px;
+  background: #0A2973;
+  color:#ffffff;
+  font-family: 'Inter';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+  grid-area: 1/2/2/3;
+}
+
+/* переключатели */
+.super-priority {
+  display: block;
+}
+
+.toggles1 {
+  grid-area: 2/1/3/2;
+  margin-left: 80px;
+}
+
+.firstline, .secondline, .thirdline {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.toggle_text {
+  font-family: 'Inter';
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 31px;
+  letter-spacing: 0em;
+  text-align: right;
+  color:#292929;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 0.5em;
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 37px;
+  margin-top: 0.5em;
+}
+
+.toggle input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #EDEDED;
+  transition: .4s;
+  border-radius: 50px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 28.7px;
+  width: 28.38px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked+.slider {
+  background-color: #009FDF;
+}
+
+input:checked+.slider:before {
+  transform: translateX(34px);
+}
+
+.choose {
+  width: 470px;
+  height: 57px;
+  
+  padding: 10px, 20px, 10px, 20px;
+  border-radius: 3px;
+  gap: 10px;
+  background-color: #EDEDED;
+  border-color: #EDEDED;
+  font-family: 'Inter';
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #292929;
+  margin-left: 20px;
+}
+
+.percents {
+  grid-area: 3/1/4/2;
+  margin-left: 165px;
+  display: inline-flex;
+  width: Hug (535px);
+  height: Hug (91px);
+  gap: 20px;
+  font-family: 'Inter';
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+
+.toggles2 {
+  grid-area: 4/1/5/2;
+  margin-left: 80px;
+  display: flex;
+}
+
+.radiobttns {
+  grid-area: 5/1/6/2;
+  margin-left: 80px;
+  display:flex;
+  gap: 60px;
+}
+
+.priority, .terms {
+  font-family: 'Inter';
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 31px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding-bottom: 1em;
+}
+
+/* радиокнопки */
+.custom-radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom-radio+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  font-family: 'Inter';
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding-bottom: 1em;
+}
+
+.custom-radio+label::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 5px solid #EDEDED;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.custom-radio:checked+label::before {
+  border-color: #009FDF;
+}
