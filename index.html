@@ -12,8 +12,91 @@
 </head>
 
 <body>
-
-
+    <div class="settings_wrapper">
+        <aside></aside>
+        <main class="settings_main">
+            <h2 class = "target_settings">Настройки</h2>
+            <button class="save">Сохранить</button>
+            <div class="toggles toggles1">
+                <div class="firstline">
+                    <label class="toggle" name="super-priority">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <div class="toggle_text">Супер-приоритет</div>
+                    <img src="./images/question_mark.svg" alt="question mark" width="31px">
+                    <select class="choose" name="target" id="target-select">
+                        <option value="">Выберите цель</option>
+                        <option value="target">подтянуть цели</option>
+                    </select>
+                </div>
+                <div class="secondline">
+                    <label class="toggle" name="money">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                    <div class="toggle_text">Равномерное распределение средств</div>
+                    <img src="./images/question_mark.svg" alt="question mark" width="31px">
+                </div>
+                <div class="thirdline">
+                    <label class="toggle" name="percents">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                    <div class="toggle_text">Распределить сумму на проценты между целями:</div>
+                </div>
+            </div>
+            <div class="percents">
+                <figure>
+                    <figcaption>Высокий</figcaption>
+                    <img src="./images/high.svg" alt="high">
+                </figure>
+                <figure>
+                    <figcaption>Средний</figcaption>
+                    <img src="./images/medium.svg" alt="medium">
+                </figure>
+                <figure>
+                    <figcaption>Низкий</figcaption>
+                    <img src="./images/low.svg" alt="low">
+                </figure>
+            </div>
+            <div class="toggles toggles2">
+                <label class="toggle" name="balance">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+                <div class="toggle_text">Не списывать денежные средства,если не хватает на балансе</div>
+            </div>
+            <div class="radiobttns">
+                <div class="radiobttns_priority">
+                    <h3 class="priority">По приоритету:</h3>
+                    <div class="radio">
+                        <input class="custom-radio" type="radio" id="priority_high" checked name="priority" value="high">
+                        <label for="priority_high">высокий</label>
+                    </div>    
+                    <div class="radio">
+                        <input class="custom-radio" type="radio" id="priority_medium" name="priority" value="medium">
+                        <label for="priority_medium">средний</label>
+                    </div>
+                    <div class="radio">
+                        <input class="custom-radio" type="radio" id="priority_low" name="priority" value="low">
+                        <label for="priority_low">низкий</label>
+                    </div>
+                </div>
+                <div class="radiobttns_terms">
+                    <h3 class="terms">По приоритету времени:</h3>
+                    <div class="radio">
+                        <input class="custom-radio" type="radio" id="terms_shortterm" checked name="terms" value="shortterm">
+                        <label for="terms_shortterm">краткосрочные</label>
+                    </div>    
+                    <div class="radio">
+                        <input class="custom-radio" type="radio" id="terms_longterm" name="terms" value="longterm">
+                        <label for="terms_longterm">долгосрочные</label>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
     <script src="index.js"></script>
 </body>
 
