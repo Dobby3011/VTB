@@ -28,9 +28,8 @@
         </section>
         <section class="goals">
           <h1>Важные цели</h1>
-          <!-- Тут прописаны стили, но я думаю, goals__item нужно будет создавать и этот HTML вставлять в innerHTML, когда мы будем добавлять цель
-            <div class="goals__item">
-            <h4 class="goals__name"></h4>
+          <div class="goals__item">
+            <h4 class="goals__name">Одежда в школу</h4>
             <p class="goals__progress">Прогресс цели</p>
             <div id="progress" class="goals__progressBar">
               <div id="progressContent" class="goals__progressBar_content">
@@ -40,15 +39,18 @@
             <div class="goals__bottom">
               <div class="goals__money-left">
                 <span class="goals__left">Осталось собрать:</span>
-                <span class="goals__amount"></span>
+                <span class="goals__amount">10 тыс</span>
               </div>
               <button class="goals__btn" type="button">&gt;</button>
             </div>
-          </div> -->
+          </div>
         </section>
         <section class="money-total">
           <h3 class="money-total__heading">Всего средств</h3>
-          <span class="money-total__amount"></span>
+          <span class="money-total__amount">120 тыс</span>
+          <div class="money-total__chart" style="height: 75%">
+            <canvas id="myChart" height="85"></canvas>
+          </div>
         </section>
         <section class="goals-total">
           <h3 class="goals-total__heading">Всего целей</h3>
@@ -56,6 +58,8 @@
         </section>
       </div>
     </main>
-    <script src="./js/home.js"></script>
+    <script src="./js/progress.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/charts.js"></script>
   </body>
 </html>
