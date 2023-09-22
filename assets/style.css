@@ -63,4 +63,36 @@ input:focus {
 
 .form__entrance_submit:hover {
   background-color: #0A2973;
+}
+
+.menu__link, .menu__bottom, .menu__top {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.menu {
+  max-width: 7.5rem;
+  height: 63.75rem;
+  border: 1px solid black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu__top {
+  margin-top: 1.875rem;
+}
+.menu__logo {
+  width: 5rem;
+  height: 1.75rem;
+}
+.menu__userFoto {
+  width: 5rem;
+  height: 5rem;
+}
+.menu__icon {
+  width: 5.375rem;
+  height: 5.375rem;
 }/*# sourceMappingURL=style.css.map */

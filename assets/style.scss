@@ -33,13 +33,12 @@ $font-family: 'Inter', sans-serif;
     text-align: center;
     display: grid;
     grid-template-rows: 30% 20% 45%;
-    //border: 1px solid red;
 
     &__image {
         display: flex;
         align-self: center;
         margin-left: 6rem;
-        // border: 1px solid red;
+
     }
 
     &__text {
@@ -47,16 +46,13 @@ $font-family: 'Inter', sans-serif;
         font-family: $font-family;
         font-size: 2rem;
         font-weight: 900;
-        //border: 1px solid red;
         text-shadow: 2px 4px 3px rgba(63, 48, 48, 0.3);
         padding-top: 1.8rem;
-
     }
 
     &__entrance {
         display: grid;
         grid-template-rows: repeat(3, 1fr);
-        //border: 1px solid rgb(0, 255, 42);
         gap: 0.6rem;
     }
 
@@ -90,4 +86,47 @@ input:focus {
 
 .form__entrance_submit:hover {
     background-color: $color_blue_dark;
+}
+
+//Стили для сайдбара
+%menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.menu {
+    max-width: 7.5rem;
+    height: 63.75rem;
+    border: 1px solid black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &__top {
+        @extend%menu;
+        margin-top: 1.875rem;
+    }
+
+    &__link,
+    &__bottom {
+        @extend%menu;
+    }
+
+    &__logo {
+        width: 5rem;
+        height: 1.75rem;
+    }
+
+    &__userFoto {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    &__icon {
+        width: 5.375rem;
+        height: 5.375rem;
+    }
 }
