@@ -22,42 +22,64 @@
       crossorigin="anonymous"
     />
   </head>
-  <style>
-    .main__block-4 {
-      background-color: #ebebeb;
-      font-family: "Inter", sans-serif;
-    }
-    .block-4__goal {
-      background-color: #ffffff;
-    }
-
-    .block-4__title {
-      font-size: 48px;
-      font-weight: 500;
-      color: #009fdf;
-    }
-    .block-4__subtitle {
-      font-size: 20px;
-      font-weight: 700;
-      color: #0a2973;
-    }
-    .block-4__text {
-      font-size: 18px;
-      font-weight: 500;
-      color: #0a2973;
-    }
-    .block-4__goal-button {
-      background-color: hsl(222, 84%, 25%);
-    }
-    .block-4__error-message {
-      color: red;
-    }
-  </style>
   <body>
     <section class="main__block-4">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-1">СайдБар Меню</div>
+          <div class="col-1">
+            <section class="menu">
+              <div class="menu__top">
+                <img
+                  class="menu__logo img-fluid"
+                  src="images/Logo2.png"
+                  alt="Логотип ВТБ"
+                />
+                <img class="menu__userFoto" src="" alt="" />
+                <a href="#" class="menu__icon">
+                  <img src="images/Add.png" alt="Добавить цель"
+                /></a>
+                <div class="menu__link">
+                  <a href="#" class="menu__icon">
+                    <img
+                      class="menu__img_dashboard"
+                      src="images/Dashboard 1.png"
+                      alt="Домашняя страница"
+                      onMouseOver="changeImage1('images/Dashboard-hover.png')"
+                      onMouseOut="changeImage1('images/Dashboard 1.png')"
+                  /></a>
+                  <a href="#" class="menu__icon">
+                    <img
+                      class="menu__img_layer"
+                      src="images/Layer.png"
+                      alt="Цели"
+                      onMouseOver="changeImage2('images/Layer-hover.png')"
+                      onMouseOut="changeImage2('images/Layer.png')"
+                  /></a>
+                  <a href="#" class="menu__icon">
+                    <img
+                      class="menu__img_settings"
+                      src="images/Settings 2.png"
+                      alt="Настройки"
+                      onMouseOver="changeImage3('images/Settings-hover.png')"
+                      onMouseOut="changeImage3('images/Settings 2.png')"
+                  /></a>
+                </div>
+              </div>
+              <div class="menu__bottom">
+                <a href="#" class="menu__icon">
+                  <img
+                    class="menu__img_help"
+                    src="images/Help.png"
+                    alt="Помощь"
+                    onMouseOver="changeImage4('images/Help-hover.png')"
+                    onMouseOut="changeImage4('images/Help.png')"
+                /></a>
+                <a href="#" class="menu__icon">
+                  <img src="images/Logout.png" alt="Выход"
+                /></a>
+              </div>
+            </section>
+          </div>
           <div class="col-7 block-4__goal">
             <div class="block-4__nav-buttons d-flex mb-3">
               <button
@@ -115,7 +137,7 @@
             <div class="block-4__startDate">
               <p class="block-4__text">Дата начала накопления:</p>
             </div>
-            <div class="block-4__ndDate">
+            <div class="block-4__endDate">
               <p class="block-4__text">Дата окончания накопления:</p>
             </div>
             <div class="block-4__goal-image"></div>
@@ -153,6 +175,7 @@
 
     <script src="index.js"></script>
     <script src="block4.js"></script>
+    <script src="sidebar.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
