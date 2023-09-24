@@ -1,132 +1,161 @@
 //Основные цвета
-$color_blue: #009FDF;
-$color_blue_dark: #0A2973;
+$color_blue: #009fdf;
+$color_blue_dark: #0a2973;
 $color_black: black;
 $color_White: white;
 $color_grey: LightGray;
 $color_red: red;
 
-
 //Шрифты
-$font-family: 'Inter', sans-serif;
+$font-family: "Inter", sans-serif;
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 // Стили для страницы входа
 
 %input {
-    max-width: 60rem;
-    min-height: 5rem;
-    font-family: $font-family;
-    border-radius: 10px;
+  max-width: 60rem;
+  min-height: 5rem;
+  font-family: $font-family;
+  border-radius: 10px;
 }
 
 .form {
-    margin: 0 auto;
-    max-width: 30rem;
-    min-height: 40rem;
-    margin-top: 12rem;
-    text-align: center;
+  margin: 0 auto;
+  max-width: 30rem;
+  min-height: 40rem;
+  margin-top: 12rem;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 30% 20% 45%;
+
+  &__image {
+    display: flex;
+    align-self: center;
+    margin-left: 6rem;
+  }
+
+  &__text {
+    color: $color_black;
+    font-family: $font-family;
+    font-size: 2rem;
+    font-weight: 900;
+    text-shadow: 2px 4px 3px rgba(63, 48, 48, 0.3);
+    padding-top: 1.8rem;
+  }
+
+  &__entrance {
     display: grid;
-    grid-template-rows: 30% 20% 45%;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0.6rem;
+  }
 
-    &__image {
-        display: flex;
-        align-self: center;
-        margin-left: 6rem;
+  &__entrance_input {
+    @extend%input;
+    font-size: 1.5rem;
+    text-align: center;
+  }
 
-    }
+  &__entrance_submit {
+    @extend%input;
+    font-size: 2rem;
+    color: $color_White;
+    background-color: $color_blue;
+    border: none;
+    box-shadow: 2px 5px 3px rgba(63, 48, 48, 0.3);
+  }
 
-    &__text {
-        color: $color_black;
-        font-family: $font-family;
-        font-size: 2rem;
-        font-weight: 900;
-        text-shadow: 2px 4px 3px rgba(63, 48, 48, 0.3);
-        padding-top: 1.8rem;
-    }
-
-    &__entrance {
-        display: grid;
-        grid-template-rows: repeat(3, 1fr);
-        gap: 0.6rem;
-    }
-
-    &__entrance_input {
-        @extend%input;
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
-    &__entrance_submit {
-        @extend%input;
-        font-size: 2rem;
-        color: $color_White;
-        background-color: $color_blue;
-        border: none;
-        box-shadow: 2px 5px 3px rgba(63, 48, 48, 0.3);
-    }
-
-    &__entrance_error {
-        color: $color_red;
-        font-family: $font-family;
-        font-size: 1.5rem;
-    }
+  &__entrance_error {
+    color: $color_red;
+    font-family: $font-family;
+    font-size: 1.5rem;
+  }
 }
 
 input:hover,
 input:focus {
-    border: 2px solid $color_blue_dark;
-    outline: $color_blue_dark;
+  border: 2px solid $color_blue_dark;
+  outline: $color_blue_dark;
 }
 
 .form__entrance_submit:hover {
-    background-color: $color_blue_dark;
+  background-color: $color_blue_dark;
 }
 
 //Стили для сайдбара
 %menu {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
 .menu {
-    max-width: 7.5rem;
-    height: 63.75rem;
-    border: 1px solid black;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  max-width: 7.5rem;
+  height: 63.75rem;
+  border: 1px solid black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 
-    &__top {
-        @extend%menu;
-        margin-top: 1.875rem;
-    }
+  &__top {
+    @extend%menu;
+    margin-top: 1.875rem;
+  }
 
-    &__link,
-    &__bottom {
-        @extend%menu;
-    }
+  &__link,
+  &__bottom {
+    @extend%menu;
+  }
 
-    &__logo {
-        width: 5rem;
-        height: 1.75rem;
-    }
+  &__logo {
+    width: 5rem;
+    height: 1.75rem;
+  }
 
-    &__userFoto {
-        width: 5rem;
-        height: 5rem;
-    }
+  &__userFoto {
+    width: 5rem;
+    height: 5rem;
+  }
 
-    &__icon {
-        width: 5.375rem;
-        height: 5.375rem;
-    }
+  &__icon {
+    width: 5.375rem;
+    height: 5.375rem;
+  }
+}
+
+////block4/////
+.main__block-4 {
+  background-color: $color_grey;
+  font-family: $font-family;
+}
+.block-4__goal {
+  background-color: $color_White;
+}
+
+.block-4__title {
+  font-size: 48px;
+  font-weight: 500;
+  color: $color_blue;
+}
+.block-4__subtitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: $color_blue_dark;
+}
+.block-4__text {
+  font-size: 18px;
+  font-weight: 500;
+  color: $color_blue_dark;
+}
+.block-4__goal-button {
+  background-color: hsl(222, 84%, 25%);
+}
+.block-4__error-message {
+  color: red;
 }
