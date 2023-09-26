@@ -95,4 +95,7 @@ input:focus {
 .menu__icon {
   width: 5.375rem;
   height: 5.375rem;
+}
+.menu .icon:hover {
+  border-radius: 50%;
 }/*# sourceMappingURL=style.css.map */
