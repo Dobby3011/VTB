@@ -74,12 +74,13 @@ input:focus {
 .menu {
   max-width: 7.5rem;
   height: 63.75rem;
-  border: 1px solid black;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
+  border-radius: 0.4rem;
 }
 .menu__top {
   margin-top: 1.875rem;
@@ -98,12 +99,12 @@ input:focus {
 }
 
 .main__block-4 {
-  background-color: #ebebeb;
+  background-color: LightGray;
   font-family: "Inter", sans-serif;
 }
 
 .block-4__goal {
-  background-color: #ffffff;
+  background-color: white;
 }
 
 .block-4__title {
@@ -125,9 +126,41 @@ input:focus {
 }
 
 .block-4__goal-button {
-  background-color: hsl(222, 84%, 25%);
+  color: #0a2973;
 }
 
 .block-4__error-message {
   color: red;
+}
+
+.block-4__data-info {
+  font-size: 18px;
+  font-weight: 700;
+  color: #009fdf;
+}
+
+.block-4__sidebar-image {
+  background-color: white;
+  border-radius: 0.4rem;
+  margin-left: 1.25rem;
+  max-width: 75rem;
+}
+
+.block-4__progress-card {
+  width: 10.75rem;
+  height: 10.75rem;
+  background-color: LightGray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  color: black;
+}
+
+#block-4__progressbar {
+  border-radius: 20px;
+  background-color: LightGray;
+  height: 25px;
+  width: 17rem;
+  margin-bottom: 23px;
 }/*# sourceMappingURL=style.css.map */
