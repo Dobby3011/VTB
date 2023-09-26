@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?Family=Inter+Tight:wght@500&display=swap.css.scss');
+
+$blue-color: rgba(0, 159, 223, 1);
+$gray-color: rgba(41, 41, 41, 1);
+$white-color: rgba(255, 255, 255, 1);
+$green-color: rgba(10, 41, 115, 1);
+$light-gray-color: rgba(237, 237, 237, 1);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+label, 
+#saveButton,
+#cancelButton {
+  color: $blue-color;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0em;
+}
+
+#goalInput,
+#sumInput,
+#prioritySelect,
+#deadlineSelect,
+#startDateInput,
+#endDateInput,
+#depositInput {
+  color: $gray-color;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+#back {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: $gray-color;
+}
+
+#topUpButton {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: $white-color;
+  background-color: $green-color;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  max-width: 120rem;
+  height: 67.5rem;
+  margin: auto;
+  gap: 1rem;
+}
+
+.nav {
+  width: 7.5rem;
+  height: 63.75rem;
+  background-color: $white-color;
+}
+
+.goals_container {
+  display: flex;
+  width: 111.25rem;
+  height: 67.5rem;
+  padding-left: 1.25rem;
+  background-color: $white-color;
+}
+
+.back {
+  display: flex;
+  width: 60rem;
+  height: 10rem;
+  margin-top: 1.5rem;
+}
+
+.goals_content {
+  display: flex;
+  flex-direction: column;
+  width: 60rem;
+  height: 63.75rem;
+  background-color: $light-gray-color;
+}
