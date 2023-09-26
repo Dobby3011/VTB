@@ -81,7 +81,7 @@
             </section>
           </div>
           <div class="col-7 block-4__goal">
-            <div class="block-4__nav-buttons d-flex mb-3">
+            <div class="block-4__nav-buttons d-flex m-3">
               <button
                 type="button"
                 class="btn block-4__back-btn me-auto"
@@ -93,7 +93,7 @@
 
               <button
                 type="button"
-                class="btn btn-outline-info block-4__edit-btn g-2"
+                class="btn btn-outline-info block-4__edit-btn g-2 me-md-2"
               >
                 Редактировать
               </button>
@@ -107,23 +107,13 @@
             <div>
               <h1 class="block-4__title">Сборка ПК</h1>
               <p class="block-4__subtitle">Прогресс цели</p>
-              <div
-                style="width: 285px"
-                class="progress block-4__progress-bar"
-                role="progressbar"
-                aria-label="Danger example"
-                aria-valuenow="100"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                <div
-                  class="progress-bar bg-danger block-4__progress-bar-active"
-                  style="width: 0%"
-                >
-                  0%
-                </div>
-                0%
-              </div>
+
+              <label for="block-4__progressbar"></label>
+              <progress
+                id="block-4__progressbar"
+                max="100"
+                value="0"
+              ></progress>
             </div>
             <div class="block-4__amount">
               <p class="block-4__text">Сумма, которую хотите накопить:</p>
@@ -164,10 +154,14 @@
                 <p class="block-4__error-message"></p>
               </div>
             </div>
+            <div>
+              <p class="block-4__subtitle">История операций</p>
+              <div class="row block-4__cards"></div>
+            </div>
           </div>
 
-          <div class="col-4 block-4__image">
-            <img src="images/block4_img.png" class="img-fluid" />
+          <div class="col-3 block-4__sidebar-image">
+            <img src="images/block4_img.png" class="img-fluid block-4__image" />
           </div>
         </div>
       </div>
