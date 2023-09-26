@@ -22,6 +22,48 @@ html {
   font-size: 16px;
 }
 
+%menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.menu {
+  max-width: 7.5rem;
+  height: 63.75rem;
+  border: 1px solid black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &__top {
+    @extend %menu;
+    margin-top: 1.875rem;
+  }
+
+  &__link,
+  &__bottom {
+    @extend %menu;
+  }
+
+  &__logo {
+    width: 5rem;
+    height: 1.75rem;
+  }
+
+  &__userFoto {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  &__icon {
+    width: 5.375rem;
+    height: 5.375rem;
+  }
+}
+
 .main-home {
   background-color: $color_grey_light;
   overflow: hidden;
