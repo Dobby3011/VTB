@@ -1,3 +1,4 @@
+import { goalObj } from "./goals.js";
 let amountContainer = document.querySelector(".block-4__amount");
 let priorityContainer = document.querySelector(".block-4__priority");
 let deadlineContainer = document.querySelector(".block-4__deadline");
@@ -6,13 +7,13 @@ let endDateContainer = document.querySelector(".block-4__endDate");
 let goalImage = document.querySelector(".block-4__goal-image");
 
 document.addEventListener("DOMContentLoaded", function () {
-  // const goalJSON = localStorage.getItem("goalObj");
-  // objectGoal = JSON.parse(goalJSON);
-  let amount = 50000;
+  const goalJSON = localStorage.getItem("goalObj");
+  objectGoal = JSON.parse(goalJSON);
+  //let amount = 50000;
   let amountText = document.createElement("p");
   amountContainer.appendChild(amountText);
   amountText.classList.add("block-4__data-info");
-  amountText.innerHTML = `${amount}₽`;
+  amountText.innerHTML = `${objectGoal.amount}₽`;
 });
 
 ///////внесение денег//////
