@@ -3,7 +3,6 @@ document.getElementById("saveButton").addEventListener("submit", saveGoal)
 document.getElementById("cancelButton").addEventListener("click", cancelGoal);
 document.getElementById("topUpButton").addEventListener("click", topUpGoal);
 
-
 function saveGoal(event) {
   event.preventDefault();
 
