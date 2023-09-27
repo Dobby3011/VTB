@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ВТБ</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="form">
+        <img src="images/Logo2.png" alt="Логотип ВТБ" class="form__image">
+        <h1 class="form__text">Pay and Save</h1>
+        <form name="formEntrance" class="form__entrance" action="#" method="post">
+            <input type="text" id="UserName" name="login" class="form__entrance_input" placeholder="Введите Логин"
+                minlength="3" maxlength="20" />
+            <br />
+            <input type="password" id="userPassword" name="password" class="form__entrance_input"
+                placeholder="Введите пароль" minlength="8" maxlength="20" />
+            <br />
+            <button type="submit" name="button" class="form__entrance_submit">Войти</button>
+            <p class="form__entrance_error" id="errorMessage"></p>
+        </form>
+    </div>
+    <script src="entry.js"></script>
+</body>
+
+</html>
