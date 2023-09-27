@@ -1,4 +1,5 @@
 * {
+  font-family: "Inter", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -165,4 +166,138 @@ input:focus {
   width: 17rem;
   margin-bottom: 23px;
 
+}
+
+html {
+  font-size: 16px;
+}
+
+.main-home {
+  background-color: #ebebeb;
+  overflow: hidden;
+}
+.main-home .container-home {
+  height: 100vh;
+  padding: 25px 25px 28px 20px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 3.4fr 10.75fr;
+  grid-template-rows: 1fr 1.43fr 2.53fr;
+  grid-template-areas: "sd gr mn" "sd gl mn" "sd gl am";
+}
+.main-home .container-home .sidebar {
+  grid-area: sd;
+}
+.main-home .container-home .greeting {
+  grid-area: gr;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-home .container-home .greeting__image {
+  width: 55%;
+}
+.main-home .container-home .goals {
+  grid-area: gl;
+  overflow-y: auto;
+}
+.main-home .container-home .goals h1 {
+  margin-bottom: 1.9rem;
+}
+.main-home .container-home .goals__item {
+  border-bottom: 1px solid #009fdf;
+  width: 94%;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+.main-home .container-home .goals__item .goals__name {
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #009fdf;
+}
+.main-home .container-home .goals__item .goals__progress {
+  font-weight: 700;
+  color: #0a2973;
+  font-size: 1.25rem;
+  margin: 20px 0 15px 0;
+}
+.main-home .container-home .goals__item .goals__progressBar {
+  border-radius: 20px;
+  background-color: #ededed;
+  height: 25px;
+  width: 100%;
+  margin-bottom: 23px;
+}
+.main-home .container-home .goals__item .goals__progressBar_content {
+  border-radius: 20px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-home .container-home .goals__item .goals__progressBar_content .goals__progressBar_text {
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: 0.5s ease-in-out;
+}
+.main-home .container-home .goals__item .goals__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-home .container-home .goals__item .goals__bottom .goals__money-left {
+  font-weight: 700;
+  font-size: 1rem;
+}
+.main-home .container-home .goals__item .goals__bottom .goals__btn {
+  border-radius: 50px;
+  width: 2.1875rem;
+  height: 2.1875rem;
+  border: none;
+  background-color: #ebebeb;
+}
+.main-home .container-home .goals__item .goals__bottom .goals__btn:hover {
+  background-color: LightGray;
+}
+.main-home .container-home .money-total {
+  grid-area: mn;
+  padding: 2.9% 2.3%;
+}
+.main-home .container-home .goals-total {
+  grid-area: am;
+  padding: 1.5% 2.3%;
+}
+
+.greeting,
+.goals,
+.money-total,
+.goals-total,
+.sidebar {
+  background-color: white;
+  border-radius: 10px;
+}
+
+.greeting,
+.goals {
+  padding: 5%;
+}
+
+.container-home h1 {
+  color: #0a2973;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: 1.7vw;
+}
+.container-home h3 {
+  color: #009fdf;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.money-total__amount,
+.goals-total__amount {
+  color: #0a2973;
+  font-weight: 900;
+  font-size: 3.3vw;
 }/*# sourceMappingURL=style.css.map */

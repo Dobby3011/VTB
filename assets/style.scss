@@ -1,10 +1,11 @@
 //Основные цвета
 $color_blue: #009fdf;
+$color_blue_2: #009fdf;
 $color_blue_dark: #0a2973;
+$color_blue_dark_2: #0a2973;
 $color_black: black;
 $color_White: white;
 $color_grey: LightGray;
-$color_red: red;
 
 //Шрифты
 $font-family: "Inter", sans-serif;
@@ -13,6 +14,146 @@ $font-family: "Inter", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: $font-family;
+}
+
+html {
+  font-size: 16px;
+}
+
+.main-home {
+  background-color: $color_grey_light;
+  overflow: hidden;
+  .container-home {
+    height: 100vh;
+    padding: 25px 25px 28px 20px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 3.4fr 10.75fr;
+    grid-template-rows: 1fr 1.43fr 2.53fr;
+    grid-template-areas:
+      "sd gr mn"
+      "sd gl mn"
+      "sd gl am";
+    .sidebar {
+      grid-area: sd;
+    }
+    .greeting {
+      grid-area: gr;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &__image {
+        width: 55%;
+      }
+    }
+    .goals {
+      grid-area: gl;
+      overflow-y: auto;
+      h1 {
+        margin-bottom: 1.9rem;
+      }
+      &__item {
+        border-bottom: 1px solid $color_blue_2;
+        width: 94%;
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+        .goals__name {
+          font-weight: 500;
+          font-size: 1.5rem;
+          color: $color_blue_2;
+        }
+        .goals__progress {
+          font-weight: 700;
+          color: $color_blue_dark_2;
+          font-size: 1.25rem;
+          margin: 20px 0 15px 0;
+        }
+        .goals__progressBar {
+          border-radius: 20px;
+          background-color: #ededed;
+          height: 25px;
+          width: 100%;
+          margin-bottom: 23px;
+          &_content {
+            border-radius: 20px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .goals__progressBar_text {
+              color: $color_White;
+              font-weight: 700;
+              font-size: 1rem;
+              transition: 0.5s ease-in-out;
+            }
+          }
+        }
+        .goals__bottom {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .goals__money-left {
+            font-weight: 700;
+            font-size: 1rem;
+          }
+          .goals__btn {
+            border-radius: 50px;
+            width: 2.1875rem;
+            height: 2.1875rem;
+            border: none;
+            background-color: $color_grey_light;
+            &:hover {
+              background-color: $color_grey;
+            }
+          }
+        }
+      }
+    }
+    .money-total {
+      grid-area: mn;
+      padding: 2.9% 2.3%;
+    }
+    .goals-total {
+      grid-area: am;
+      padding: 1.5% 2.3%;
+    }
+  }
+}
+
+.greeting,
+.goals,
+.money-total,
+.goals-total,
+.sidebar {
+  background-color: $color_White;
+  border-radius: 10px;
+}
+
+.greeting,
+.goals {
+  padding: 5%;
+}
+
+.container-home {
+  h1 {
+    color: $color_blue_dark_2;
+    font-family: $font-family;
+    font-weight: 900;
+    font-size: 1.7vw;
+  }
+  h3 {
+    color: $color_blue_2;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+}
+
+.money-total__amount,
+.goals-total__amount {
+  color: $color_blue_dark_2;
+  font-weight: 900;
+  font-size: 3.3vw;
 }
 
 // Стили для страницы входа
@@ -189,4 +330,3 @@ input:focus {
   width: 17rem;
   margin-bottom: 23px;
 }
-    
