@@ -1,132 +1,275 @@
 //Основные цвета
-$color_blue: #009FDF;
-$color_blue_dark: #0A2973;
+$color_blue: #009fdf;
+$color_blue_dark: #0a2973;
 $color_black: black;
 $color_White: white;
 $color_grey: LightGray;
 $color_red: red;
 
-
 //Шрифты
-$font-family: 'Inter', sans-serif;
+$font-family: "Inter", sans-serif;
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 // Стили для страницы входа
 
 %input {
-    max-width: 60rem;
-    min-height: 5rem;
-    font-family: $font-family;
-    border-radius: 10px;
+  max-width: 60rem;
+  min-height: 5rem;
+  font-family: $font-family;
+  border-radius: 10px;
 }
 
 .form {
-    margin: 0 auto;
-    max-width: 30rem;
-    min-height: 40rem;
-    margin-top: 12rem;
-    text-align: center;
+  margin: 0 auto;
+  max-width: 30rem;
+  min-height: 40rem;
+  margin-top: 12rem;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 30% 20% 45%;
+
+  &__image {
+    display: flex;
+    align-self: center;
+    margin-left: 6rem;
+  }
+
+  &__text {
+    color: $color_black;
+    font-family: $font-family;
+    font-size: 2rem;
+    font-weight: 900;
+    text-shadow: 2px 4px 3px rgba(63, 48, 48, 0.3);
+    padding-top: 1.8rem;
+  }
+
+  &__entrance {
     display: grid;
-    grid-template-rows: 30% 20% 45%;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0.6rem;
+  }
 
-    &__image {
-        display: flex;
-        align-self: center;
-        margin-left: 6rem;
+  &__entrance_input {
+    @extend%input;
+    font-size: 1.5rem;
+    text-align: center;
+  }
 
-    }
+  &__entrance_submit {
+    @extend%input;
+    font-size: 2rem;
+    color: $color_White;
+    background-color: $color_blue;
+    border: none;
+    box-shadow: 2px 5px 3px rgba(63, 48, 48, 0.3);
+  }
 
-    &__text {
-        color: $color_black;
-        font-family: $font-family;
-        font-size: 2rem;
-        font-weight: 900;
-        text-shadow: 2px 4px 3px rgba(63, 48, 48, 0.3);
-        padding-top: 1.8rem;
-    }
-
-    &__entrance {
-        display: grid;
-        grid-template-rows: repeat(3, 1fr);
-        gap: 0.6rem;
-    }
-
-    &__entrance_input {
-        @extend%input;
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
-    &__entrance_submit {
-        @extend%input;
-        font-size: 2rem;
-        color: $color_White;
-        background-color: $color_blue;
-        border: none;
-        box-shadow: 2px 5px 3px rgba(63, 48, 48, 0.3);
-    }
-
-    &__entrance_error {
-        color: $color_red;
-        font-family: $font-family;
-        font-size: 1.5rem;
-    }
+  &__entrance_error {
+    color: $color_red;
+    font-family: $font-family;
+    font-size: 1.5rem;
+  }
 }
 
 input:hover,
 input:focus {
-    border: 2px solid $color_blue_dark;
-    outline: $color_blue_dark;
+  border: 2px solid $color_blue_dark;
+  outline: $color_blue_dark;
 }
 
 .form__entrance_submit:hover {
-    background-color: $color_blue_dark;
+  background-color: $color_blue_dark;
 }
 
 //Стили для сайдбара
 %menu {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
 .menu {
-    max-width: 7.5rem;
-    height: 63.75rem;
-    border: 1px solid black;
-    text-align: center;
+  max-width: 7.5rem;
+  height: 63.75rem;
+  border: 1px solid black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &__top {
+    @extend%menu;
+    margin-top: 1.875rem;
+  }
+
+  &__link,
+  &__bottom {
+    @extend%menu;
+  }
+
+  &__logo {
+    width: 5rem;
+    height: 1.75rem;
+  }
+
+  &__userFoto {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  &__icon {
+    width: 5.375rem;
+    height: 5.375rem;
+  }
+}
+
+//Стили для хелп
+
+#background {
+  background-color: $color_grey;
+}
+
+.help {
+  margin-left: 16vw;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-family: $font-family;
+  border: solid 1px $color_grey;
+  border-radius: 1rem;
+  background-color: white;
+  @media screen and (max-width: 425px) {
+    max-height: 80vh;
+    width: 90vw;
+    margin-left: 0;
+    left: 50%;
+    transform: translate(-50%, -45%);
+  }
+  &__backgr {
+    margin: 5vw;
+    margin-top: 2vw;
+    @media screen and (max-width: 425px) {
+      height: 76vh;
+    }
+  }
+  &__clear {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3vw;
+  }
+  &__image {
+    width: 3rem;
+    @media screen and (max-width: 425px) {
+      max-width: 3rem;
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2vw;
+  }
+  &__block {
+    max-width: 16vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    border: solid 1px $color_grey;
+    border-radius: 0.7rem;
+    padding: 7vw 0;
+    @media screen and (max-width: 425px) {
+      max-width: 75vw;
+      width: 75vw;
+      height: 60vh;
+    }
+  }
+  &__section {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-
-    &__top {
-        @extend%menu;
-        margin-top: 1.875rem;
+    padding: 0 2rem;
+    @media screen and (min-width: 769px) and (max-width: 1023px) {
+      padding: 0 1rem;
     }
-
-    &__link,
-    &__bottom {
-        @extend%menu;
+    @media screen and (max-width: 768px) {
+      padding: 0 0.5rem;
     }
-
-    &__logo {
-        width: 5rem;
-        height: 1.75rem;
+    @media screen and (max-width: 425px) {
+      height: 55vh;
+      justify-content: center;
     }
-
-    &__userFoto {
-        width: 5rem;
-        height: 5rem;
+  }
+  &__step {
+    font-size: 2rem;
+    font-weight: 900;
+    color: $color_blue_dark;
+    margin-bottom: 2vh;
+    @media screen and (min-width: 1024px) and (max-width: 1500px) {
+      font-size: 1.7rem;
     }
-
-    &__icon {
-        width: 5.375rem;
-        height: 5.375rem;
+    @media screen and (min-width: 769px) and (max-width: 1023px) {
+      font-size: 1.5rem;
     }
+    @media screen and (max-width: 768px) {
+      font-size: 1rem;
+    }
+    @media screen and (max-width: 425px) {
+      font-size: 2rem;
+      margin-bottom: 0;
+    }
+  }
+  &__img {
+    height: 15vw;
+    max-width: 17vw;
+    @media screen and (max-width: 425px) {
+      height: 75vw;
+      max-width: 65vw;
+    }
+  }
+  &__text {
+    text-align: center;
+    font-size: 1.5rem;
+    max-width: 20vw;
+    margin-top: 2vh;
+    @media screen and (min-width: 1024px) and (max-width: 1500px) {
+      font-size: 1.2rem;
+    }
+    @media screen and (min-width: 769px) and (max-width: 1023px) {
+      font-size: 1rem;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 0.7rem;
+    }
+    @media screen and (max-width: 425px) {
+      font-size: 1.1rem;
+      max-width: 55vw;
+      margin-top: 0;
+    }
+  }
+  #block2Text {
+    max-width: 10vw;
+  }
+  @media screen and (min-width: 426px) {
+    .itcss {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 425px) {
+    #block1,
+    #block2,
+    #block3,
+    #block4 {
+      display: none;
+    }
+    #Text2,
+    #Text4 {
+      max-width: 28vw;
+    }
+  }
 }
