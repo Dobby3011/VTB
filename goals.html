@@ -4,89 +4,169 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./assets/goals.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./goals.css">
   </head>
   <body>
     <div class="wrapper">
-    <div class="nav"></div>
-    <div class="goals_container">
-    <div class="goals_content">
-     
-  <div class="back">
-    <button id="back"><img class="chevron_left" src="./images/Chevron Left.png" alt="стрелка">Назад</button>
-    <button type="submit" id="saveButton">Сохранить</button>
-    <button type="button" id="cancelButton">Отмена</button>
-  </div>
-    <div class="forms">
-    <form id="goalForm">
-      <label for="goalInput">Название цели</label><br />
-      <input
-        type="text"
-        id="goalInput"
-        placeholder="Введите название цели"
-        required
-      /><br/>
+      <div class="nav">
+        <section class="menu">
+          <div class="menu__top">
+            <img
+              class="menu__logo"
+              src="./assets/images/Logo2.png"
+              alt="Логотип ВТБ"
+            />
+            <img class="menu__userFoto" src="" alt="" />
+            <a href="goals.html" class="menu__icon">
+              <img src="./assets/images/Add.png" alt="Добавить цель"
+            /></a>
+          </div>
 
-      <label for="sumInput">Сумма которую хотите накопить</label><br />
-      <input type="number" id="sumInput" placeholder="Введите сумму" required />
-      <div>
-        <label for="prioritySelect">Приоритет цели</label><br />
-        <select id="prioritySelect">
-          <option value=" ">Выберите приоритет</option>
-          <option value="высокий">Высокий</option>
-          <option value="средний">Средний</option>
-          <option value="низкий">Низкий</option>
-        </select>
+          <div class="menu__link">
+            <a href="home.html" class="menu__icon">
+              <img
+                class="menu__img_dashboard"
+                src="./assets/images/Dashboard 1.png"
+                alt="Домашняя страница"
+                onMouseOver="changeImage1('images/Dashboard-hover.png')"
+                onMouseOut="changeImage1('./assets/images/Dashboard 1.png')"
+            /></a>
+            <a href="block4.html" class="menu__icon">
+              <img
+                class="menu__img_layer"
+                src="./assets/images/Layer.png"
+                alt="Цели"
+                onMouseOver="changeImage2('images/Layer-hover.png')"
+                onMouseOut="changeImage2('./assets/images/Layer.png')"
+            /></a>
+            <a href="#" class="menu__icon">
+              <img
+                class="menu__img_settings"
+                src="./assets/images/Settings 2.png"
+                alt="Настройки"
+                onMouseOver="changeImage3('images/Settings-hover.png')"
+                onMouseOut="changeImage3('./assets/images/Settings 2.png')"
+            /></a>
+          </div>
+
+          <div class="menu__bottom">
+            <a href="#" class="menu__icon">
+              <img
+                class="menu__img_help"
+                src="./assets/images/Help.png"
+                alt="Помощь"
+                onMouseOver="changeImage4('images/Help-hover.png')"
+                onMouseOut="changeImage4('./assets/images/Help.png')"
+            /></a>
+            <a href="#" class="menu__icon">
+              <img src="./assets/images/Logout.png" alt="Выход"
+            /></a>
+          </div>
+        </section>
       </div>
-      <div>
-        <label for="deadlineSelect">Приоритет цели по времени</label><br />
-        <select id="deadlineSelect">
-          <option value=" ">Выберите приоритет по времени</option>
-          <option value="долгосрочная">Долгосрочные</option>
-          <option value="краткосрочная">Краткосрочные</option>
-        </select>
-      </div>
-      <div>
-        <label for="startDateInput">Дата начала накопления</label><br />
-        <input type="date" id="startDateInput" required /><br />
-      </div>
-      <div>
-        <label for="endDateInput">Дата окончания накопления</label><br />
-        <input type="date" id="endDateInput" required /><br />
-      </div>
-      <div>
-        <label for="depositInput">Сумма которую хотите внести сейчас</label
-        ><br />
-        <input
-          type="number"
-          id="depositInput"
-          placeholder="Введите сумму"
+      <div class="goals_container">
+        <div class="goals_content">
+          <div class="goals_back">
+            <button type="button" id="back">
+              <img
+                class="chevron_left"
+                src="./assets/images/Chevron Left.png"
+                alt="стрелка"
+              />Назад
+            </button>
+            <button type="submit" id="saveButton">Сохранить</button>
+            <button type="button" id="cancelButton">Отмена</button>
+          </div>
+
+          <div class="forms">
+            <form id="goalForm">
+              <label for="goalInput">Название цели</label><br />
+              <input
+                type="text"
+                id="goalInput"
+                placeholder="Введите название цели"
+                required
+              /><br />
+
+              <label for="sumInput">Сумма которую хотите накопить</label><br />
+              <input
+                type="number"
+                id="sumInput"
+                placeholder="Введите сумму"
+                required
+              />
+              <div>
+                <label for="prioritySelect">Приоритет цели</label><br />
+                <select id="prioritySelect">
+                  <option value=" ">Выберите приоритет</option>
+                  <option value="высокий">Высокий</option>
+                  <option value="средний">Средний</option>
+                  <option value="низкий">Низкий</option>
+                </select>
+              </div>
+              <div>
+                <label for="deadlineSelect">Приоритет цели по времени</label
+                ><br />
+                <select id="deadlineSelect">
+                  <option value=" ">Выберите приоритет по времени</option>
+                  <option value="долгосрочная">Долгосрочные</option>
+                  <option value="краткосрочная">Краткосрочные</option>
+                </select>
+              </div>
+              <div>
+                <label for="startDateInput">Дата начала накопления</label><br />
+                <input type="date" id="startDateInput" required /><br />
+              </div>
+              <div>
+                <label for="endDateInput">Дата окончания накопления</label
+                ><br />
+                <input type="date" id="endDateInput" required /><br />
+              </div>
+              <div>
+                <label for="depositInput"
+                  >Сумма которую хотите внести сейчас</label
+                ><br />
+                <input
+                  type="number"
+                  id="depositInput"
+                  placeholder="Введите сумму"
                 />
+              </div>
+            </form>
+            <div id="addForm">
+              <label for="imageInput">
+                <img
+                  src="./assets/images/Add.png"
+                  alt="Кликабельная загрузка картинки"
+                  id="clickableImage"
+                />
+              </label>
+              <input
+                type="file"
+                id="imageInput"
+                accept="image/*"
+                style="display: none"
+              />
+              <div id="imagePreview"></div>
+            </div>
+          </div>
+          <button id="topUpButton">Пополнить</button>
+        </div>
+        <div class="goals_image" id="goals_img">
+             <div id="goals_img5">
+              <div class="goals_image_nested">
+            <img src="./assets/images/image goals.png" alt="мишень" />
+          </div>
+          </div>
+        </div>
+        </div>
       </div>
-    </form>
-    <div id="addForm">
-      <label for="imageInput">
-        <img src="./images/Add.png" alt="Кликабельная загрузка картинки" id="clickableImage">
-      </label>
-      <input type="file" id="imageInput" accept="image/*" style="display: none">
-      <div id="imagePreview"></div>
-  </div>
-
-</div>
-  <button id="topUpButton">Пополнить</button>
-</div>
-<div id="goals_img">
-  <div id="img5"><img src="./images/image goals.png" alt="мишень"/></div>
-</div>
-</div>
-</div>
+    </div>
     <script src="./goals.js"></script>
   </body>
 </html>
-

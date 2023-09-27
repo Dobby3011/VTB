@@ -8,6 +8,40 @@ html {
   font-size: 16px;
 }
 
+/*стили для сайдбара*/
+.menu__link, .menu__bottom, .menu__top {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.menu {
+  max-width: 7.5rem;
+  height: 63.75rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 0.4rem;
+}
+.menu__top {
+  margin-top: 1.875rem;
+}
+.menu__logo {
+  width: 5rem;
+  height: 1.75rem;
+}
+.menu__userFoto {
+  width: 5rem;
+  height: 5rem;
+}
+.menu__icon {
+  width: 5.375rem;
+  height: 5.375rem;
+}
+
 /*цвет шрифта лейблов и кнопок "сохранить" и "отмена"*/
 label, 
 #saveButton,
@@ -64,6 +98,7 @@ background-color: rgba(10, 41, 115, 1);
   height: 67.5rem;
   margin: auto;
   gap: 1rem;
+  background-color:  rgba(255, 255, 255, 1);
 }
 .nav {
   width: 7.5rem;
@@ -75,43 +110,56 @@ background-color: rgba(10, 41, 115, 1);
   display: flex;
   width: 111.25rem;
   height: 67.5rem;
-  padding-left: 1.25rem;
+  margin-left: 1.25rem;
   background-color: rgba(255, 255, 255, 1);
 }
 
-.back {
+.goals_back {
   display: flex;
   width: 60rem;
-  height: 10rem;
+  height: 3.875rem;
   margin-top: 1.5rem;
+  margin-bottom: 1.875rem;
 }
+#back{
+  width: 6.625rem;
+  height: 2.625rem;
+  margin: 0.625rem 11.25rem 0.625rem 8rem;
+  
+  }
+  
+  #saveButton,
+  #cancelButton {
+  width: 13.562rem;
+  height: 1.625rem;
+  padding: 2rem 4rem 2rem 4rem;
+  border-radius: 0.6rem;
+  background-color: rgba(255, 255, 255, 1);
+  border: 2px solid rgba(0, 159, 223, 1);
+  }
+  #cancelButton{
+    margin-left: 3.876rem;
+  }
 
-.goals_content {
+  .goals_content {
+  margin-right: 3.125rem;
   display: flex;
   flex-direction: column;
   width: 60rem;
   height: 63.75rem;
-  background-color: rgba(237, 237, 237, 1);
-}
-.forms {
-  display: flex;
-}
-
-#addForm {
-  display: flex;
-  width: 18rem;
-  height: 20rem;
-  margin-top: 1.4rem;
-  margin-left: 2rem;
-  background-color: rgba(255, 255, 255, 1);
-  border: 1px solid rgba(237, 237, 237, 1);
+  background-color:  rgba(255, 255, 255, 1);
   }
 
-  label {
-    width: 7.4rem;
-    height: 1.3rem;
-    margin-top: 1rem;
-    }
+  .forms {
+  display: flex;
+  }
+    
+  
+#goalForm{
+  width: 29.375rem;
+  height: 44.75rem;
+  margin-left: 8rem;
+}
 
 #goalInput,
 #sumInput,
@@ -129,6 +177,22 @@ background-color: rgba(10, 41, 115, 1);
   gap: 1.5rem;
   
 }
+#addForm {
+  display: flex;
+  width: 17.81rem;
+  height: 20.18rem;
+  margin-top: 1.4rem;
+  margin-left: 1.875rem;
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(237, 237, 237, 1);
+  }
+
+  label {
+    width: 7.4rem;
+    height: 1.3rem;
+    margin-top: 1rem;
+    }
+
 #imageInput,
 #clickableImage {
   width: 5.8rem;
@@ -143,7 +207,7 @@ background-color: rgba(10, 41, 115, 1);
 width: 29.3rem;
 height: 4.8rem;
 margin-left: 8rem;
-margin-top: 5rem;
+margin-top: 4rem;
 padding: 2.75rem 4.5rem;
 border-radius: 0.6rem;
 gap: 0.6rem;
@@ -154,12 +218,14 @@ gap: 0.6rem;
   width: 46.25rem;
   height: 63.75rem;
   margin-top: 1.8rem;
+  margin-left: 3.75rem;
   background: rgba(255, 255, 255, 1);
 }
 
-#img5 {
-  width: 43rem;
-  height: 43rem;
+
+  #img5{
+  width: 43.06rem;
+  height: 43.06rem;
   margin-top: 12.25rem;
-  margin-left: 65rem;
+  margin-left: 65.06rem;
 }

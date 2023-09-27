@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?Family=Inter+Tight:wght@500&display=swap.css.scss");
+
+$blue-color: rgba(0, 159, 223, 1);
+$gray-color: rgba(41, 41, 41, 1);
+$white-color: rgba(255, 255, 255, 1);
+$green-color: rgba(10, 41, 115, 1);
+$light-gray-color: rgba(237, 237, 237, 1);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+//Стили для сайдбара
+%menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.menu {
+  max-width: 7.5rem;
+  height: 63.75rem;
+  //border: 1px solid black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color_White;
+  border-radius: 0.4rem;
+
+  &__top {
+    @extend%menu;
+    margin-top: 1.875rem;
+  }
+
+  &__link,
+  &__bottom {
+    @extend%menu;
+  }
+
+  &__logo {
+    width: 5rem;
+    height: 1.75rem;
+  }
+
+  &__userFoto {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  &__icon {
+    width: 5.375rem;
+    height: 5.375rem;
+  }
+}
+//стили для форм
+.forms {
+  display: flex;
+
+  #goalInput,
+  #sumInput,
+  #prioritySelect,
+  #deadlineSelect,
+  #startDateInput,
+  #endDateInput,
+  #depositInput {
+    color: $gray-color;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    width: 29.3rem;
+    height: 3.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    border-radius: 0.1rem;
+    gap: 1.5rem;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  max-width: 120rem;
+  height: 67.5rem;
+  margin: auto;
+  gap: 1rem;
+  background-color: $white-color;
+}
+
+.nav {
+  width: 7.5rem;
+  height: 63.75rem;
+  background-color: $white-color;
+}
+
+.goals_container {
+  display: flex;
+  width: 111.25rem;
+  height: 67.5rem;
+  padding-left: 1.25rem;
+  background-color: $white-color;
+}
+
+.goals_content {
+  display: flex;
+  flex-direction: column;
+  width: 60rem;
+  height: 63.75rem;
+  background-color: $light-gray-color;
+}
+
+//Стили для кнопок "назад", "сохранить" и "отмена")
+$button-color: $blue-color;
+$button-font-family: Inter;
+$button-font-size: 20px;
+$button-font-weight: 500;
+$button-line-height: 21px;
+$button-letter-spacing: 0em;
+
+label,
+#saveButton,
+#cancelButton {
+  color: $button-color;
+  font-family: $button-font-family;
+  font-size: $button-font-size;
+  font-weight: $button-font-weight;
+  line-height: $button-line-height;
+  letter-spacing: $button-letter-spacing;
+}
+
+$goals-back-width: 60rem;
+$goals-back-height: 3.875rem;
+$goals-back-margin-top: 1.5rem;
+$goals-back-margin-bottom: 1.875rem;
+
+$back-width: 6.625rem;
+$back-height: 2.625rem;
+$back-margin: 0.625rem 11.25rem 0.625rem 8rem;
+
+$save-cancel-width: 13.562rem;
+$save-cancel-height: 1.625rem;
+$save-cancel-padding: 2rem 4rem 2rem 4rem;
+$save-cancel-border-radius: 0.6rem;
+$save-cancel-background-color: $white-color;
+$save-cancel-border: 2px solid $blue-color;
+$cancel-button-margin-left: 3.876rem;
+
+.goals_back {
+  display: flex;
+  width: $goals-back-width;
+  height: $goals-back-height;
+  margin-top: $goals-back-margin-top;
+  margin-bottom: $goals-back-margin-bottom;
+}
+
+#back {
+  width: $back-width;
+  height: $back-height;
+  margin: $back-margin;
+}
+
+#saveButton, #cancelButton {
+  width: $save-cancel-width;
+  height: $save-cancel-height;
+  padding: $save-cancel-padding;
+  border-radius: $save-cancel-border-radius;
+  background-color: $save-cancel-background-color;
+  border: $save-cancel-border;
+}
+
+#cancelButton {
+  margin-left: $cancel-button-margin-left;
+}
+
+//Стили для add-form (загружаемая картинка с новой целью)
+$add-form-width: 17.81rem;
+$add-form-height: 20.18rem;
+$add-form-margin-top: 1.4rem;
+$add-form-margin-left: 1.875rem;
+$add-form-background-color: $white-color;
+$add-form-border-color: $light-gray-color;
+
+$label-width: 7.4rem;
+$label-height: 1.3rem;
+$label-margin-top: 1rem;
+
+$image-input-width: 5.8rem;
+$image-input-height: 5.8rem;
+$image-input-margin: 6rem;
+$image-input-padding: 1rem;
+$image-input-border-radius: 3.1rem;
+$image-input-border-color: $light-gray-color;
+
+#addForm {
+  display: flex;
+  width: $add-form-width;
+  height: $add-form-height;
+  margin-top: $add-form-margin-top;
+  margin-left: $add-form-margin-left;
+  background-color: $add-form-background-color;
+  border: 1px solid $add-form-border-color;
+}
+
+label {
+  width: $label-width;
+  height: $label-height;
+  margin-top: $label-margin-top;
+}
+
+#imageInput,
+#clickableImage {
+  width: $image-input-width;
+  height: $image-input-height;
+  margin: $image-input-margin;
+  padding: $image-input-padding;
+  border-radius: $image-input-border-radius;
+  border: 1px solid $image-input-border-color;
+}
+
+//Стили для кнопки пополнения денег
+$top-up-button-width: 29.3rem;
+$top-up-button-height: 4.8rem;
+$top-up-button-margin-left: 8rem;
+$top-up-button-margin-top: 4rem;
+$top-up-button-padding-vertical: 2.75rem;
+$top-up-button-padding-horizontal: 4.5rem;
+$top-up-button-border-radius: 0.6rem;
+$top-up-button-gap: 0.6rem;
+
+#topUpButton {
+  width: $top-up-button-width;
+  height: $top-up-button-height;
+  margin-left: $top-up-button-margin-left;
+  margin-top: $top-up-button-margin-top;
+  padding: $top-up-button-padding-vertical $top-up-button-padding-horizontal;
+  border-radius: $top-up-button-border-radius;
+  gap: $top-up-button-gap;
+}
+
+$top-up-button-font-size: 24px;
+$top-up-button-font-weight: 500;
+$top-up-button-line-height: 29px;
+$top-up-button-letter-spacing: 0em;
+$top-up-button-text-align: center;
+$top-up-button-color: $white-color;
+$top-up-button-background-color: $green-color;
+
+#topUpButton {
+  font-size: $top-up-button-font-size;
+  font-weight: $top-up-button-font-weight;
+  line-height: $top-up-button-line-height;
+  letter-spacing: $top-up-button-letter-spacing;
+  text-align: $top-up-button-text-align;
+  color: $top-up-button-color;
+  background-color: $top-up-button-background-color;
+}
+
+//Стили для  #goals_img (картинки с целью)
+$goals-img-width: 46.25rem;
+$goals-img-height: 63.75rem;
+$goals-img-margin-top: 1.8rem;
+$goals-img-margin-left: 3.75rem;
+$goals-img-background: $white-color;
+
+$img5-width: 43.06rem;
+$img5-height: 43.06rem;
+$img5-margin-top: 12.25rem;
+$img5-margin-left: 65.06rem;
+
+#goals_img {
+  display: flex;
+  width: $goals-img-width;
+  height: $goals-img-height;
+  margin-top: $goals-img-margin-top;
+  margin-left: $goals-img-margin-left;
+  background: $goals-img-background;
+
+  #img5 {
+    width: $img5-width;
+    height: $img5-height;
+    margin-top: $img5-margin-top;
+    margin-left: $img5-margin-left;
+  }
+}
