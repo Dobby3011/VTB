@@ -6,22 +6,30 @@ const goal = JSON.parse(goalString);
 let count = 0;
 
 document.addEventListener("DOMContentLoaded", function(event) {
+  let goalArr = localStorage.getItem('goals');
+  goalArr = goalArr ? JSON.parse(goalArr) : [];
     if(goal) {
-      const goalCount = createGoal();
-      window.localStorage.setItem(`goal-${goalCount}`, JSON.stringify(goal));
+      goalArr.push(goal);
+      window.localStorage.setItem(`goals`, JSON.stringify(goalArr));
       window.localStorage.removeItem('goal');
+    }
+    for (let i = 0; i < goalArr.length; i++) {
+      createGoal(goalArr[i]);
+      //goalArr[i].count = goalCount;
+      //goalArr[i].count = i; 
     }
 });  
 
-function createGoal() {
+function createGoal(goal) {
   count += 1;
+  goal.count = count;
   const newGoal = document.createElement('div');
   newGoal.classList.add('goals__item');
   newGoal.innerHTML = `<h4 class="goals__name">${goal.name}</h4> <p class="goals__progress">Прогресс цели</p> <div id="progress" class="goals__progressBar"><div id="progressContent-${count}" class="goals__progressBar_content">
   <span class="goals__progressBar_text" id="progressText-${count}"></span>
 </div></div><div class="goals__bottom"><div class="goals__money-left"><span class="goals__left">Осталось собрать: </span><span class="goals__amount">10 тыс</span></div><button class="goals__btn" type="button">&gt;</button></div>`;
   goalsElement.append(newGoal);
-  return count;
+  //return count;
 }
 
 //const goal1 = createGoal();
