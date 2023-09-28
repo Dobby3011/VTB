@@ -1,5 +1,5 @@
 document.getElementById("goalForm").addEventListener("submit", saveGoal);
-document.getElementById("saveButton").addEventListener("submit", saveGoal)
+document.getElementById("saveButton").addEventListener("click", saveGoal)
 document.getElementById("cancelButton").addEventListener("click", cancelGoal);
 document.getElementById("topUpButton").addEventListener("click", topUpGoal);
 
@@ -19,6 +19,17 @@ function saveGoal(event) {
   console.log("Приоритет по срокам: " + deadline);
   console.log("Дата начала накопления: " + startDate);
   console.log("Дата окончания накопления: " + endDate);
+
+  const goalObj = {
+    name: goal,
+    amount: amount,
+    priority: priority,
+    deadline: deadline,
+    startDate: startDate,
+    endDate: endDate
+  };
+
+  window.localStorage.setItem('goal', JSON.stringify(goalObj));
 }
 
 function cancelGoal() {
